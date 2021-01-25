@@ -17,8 +17,8 @@ package claims
 import (
 	"encoding/json"
 	stdliberr "errors"
-	"github.com/greenpau/caddy-auth-jwt/pkg/config"
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 	"strings"
 	"time"
 

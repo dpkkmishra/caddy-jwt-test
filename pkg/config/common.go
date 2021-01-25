@@ -16,7 +16,7 @@ package config
 
 import (
 	"crypto/rsa"
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 )
 
 var defaultKeyID = "0"

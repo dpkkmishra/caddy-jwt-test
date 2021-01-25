@@ -16,7 +16,7 @@ package grantor
 
 import (
 	"errors"
-	jwterrors "github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	jwterrors "github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 	"testing"
 )
 

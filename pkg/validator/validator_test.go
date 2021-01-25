@@ -23,9 +23,9 @@ import (
 	"time"
 
 	jwtlib "github.com/dgrijalva/jwt-go"
-	jwtacl "github.com/greenpau/caddy-auth-jwt/pkg/acl"
-	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
-	jwterrors "github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	jwtacl "github.com/dpkkmishra/caddy-jwt-test/pkg/acl"
+	jwtconfig "github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	jwterrors "github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 )
 
 func TestRSAValidation(t *testing.T) {

@@ -16,10 +16,10 @@ package auth
 
 import (
 	"fmt"
-	jwtacl "github.com/greenpau/caddy-auth-jwt/pkg/acl"
-	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
-	jwterrors "github.com/greenpau/caddy-auth-jwt/pkg/errors"
-	jwtvalidator "github.com/greenpau/caddy-auth-jwt/pkg/validator"
+	jwtacl "github.com/dpkkmishra/caddy-jwt-test/pkg/acl"
+	jwtconfig "github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	jwterrors "github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
+	jwtvalidator "github.com/dpkkmishra/caddy-jwt-test/pkg/validator"
 	"go.uber.org/zap"
 	"os"
 	"strings"

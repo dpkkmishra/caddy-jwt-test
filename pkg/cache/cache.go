@@ -15,7 +15,7 @@
 package cache
 
 import (
-	"github.com/greenpau/caddy-auth-jwt/pkg/claims"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/claims"
 	"sync"
 	"time"
 )

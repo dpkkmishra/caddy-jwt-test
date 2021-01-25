@@ -18,7 +18,7 @@ import (
 	"crypto/rsa"
 
 	jwtlib "github.com/dgrijalva/jwt-go"
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 )
 
 var defaultKeyID = "0"

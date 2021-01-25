@@ -15,12 +15,12 @@
 package claims
 
 import (
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 	"reflect"
 	"testing"
 	"time"
 
-	"github.com/greenpau/caddy-auth-jwt/pkg/backends"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/backends"
 
 	jwtlib "github.com/dgrijalva/jwt-go"
 )

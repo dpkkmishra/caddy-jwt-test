@@ -15,12 +15,13 @@
 package jwt
 
 import (
+	"net/http"
+
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp/caddyauth"
-	jwtauth "github.com/greenpau/caddy-auth-jwt/pkg/auth"
+	jwtauth "github.com/dpkkmishra/caddy-jwt-test/pkg/auth"
 	"github.com/satori/go.uuid"
-	"net/http"
 )
 
 func init() {

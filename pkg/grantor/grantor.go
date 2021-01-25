@@ -15,9 +15,9 @@
 package grantor
 
 import (
-	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
-	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
-	jwterrors "github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	jwtclaims "github.com/dpkkmishra/caddy-jwt-test/pkg/claims"
+	jwtconfig "github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	jwterrors "github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 )
 
 // TokenGrantor creates and issues JWT tokens.

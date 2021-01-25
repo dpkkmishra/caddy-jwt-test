@@ -16,8 +16,8 @@ package acl
 
 import (
 	"fmt"
-	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	jwtclaims "github.com/dpkkmishra/caddy-jwt-test/pkg/claims"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 	"testing"
 	"time"
 )
@@ -63,12 +63,13 @@ func evalAccessListTestResults(t *testing.T, i int, test AccessListTestInput, er
 }
 
 func TestAccessListEntry(t *testing.T) {
-	testFailed := 0
+	testFailed := 0ls
+
 	for i, test := range []AccessListTestInput{
 		{
 			name:       "allow anonymous role",
 			action:     "allow",
-			claim:      "roles",
+			claim:      "email",
 			values:     []string{"anonymous"},
 			shouldFail: false,
 			shouldErr:  false,

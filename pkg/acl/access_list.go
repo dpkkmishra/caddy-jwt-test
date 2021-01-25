@@ -15,9 +15,9 @@
 package acl
 
 import (
-	jwtclaims "github.com/greenpau/caddy-auth-jwt/pkg/claims"
-	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
-	"github.com/greenpau/caddy-auth-jwt/pkg/errors"
+	jwtclaims "github.com/dpkkmishra/caddy-jwt-test/pkg/claims"
+	jwtconfig "github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	"github.com/dpkkmishra/caddy-jwt-test/pkg/errors"
 	"regexp"
 	"strings"
 )

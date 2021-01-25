@@ -1,4 +1,4 @@
-module github.com/greenpau/caddy-auth-jwt
+module github.com/dpkkmishra/caddy-jwt-test
 
 go 1.14
 
