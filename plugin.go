@@ -71,6 +71,9 @@ func (m AuthMiddleware) Authenticate(w http.ResponseWriter, r *http.Request) (ca
 	if v, exists := user["id"]; exists {
 		userIdentity.ID = v.(string)
 	}
+	if v, exists := user["email"]; exists {
+		userIdentity.email = v.(string)
+	}
 	for _, k := range []string{"claim_id", "sub", "email", "name"} {
 		if v, exists := user[k]; exists {
 			userIdentity.Metadata[k] = v.(string)
@@ -78,6 +81,9 @@ func (m AuthMiddleware) Authenticate(w http.ResponseWriter, r *http.Request) (ca
 	}
 	fmt.Println("----------------------------")
 	fmt.Printf("%v\n", userIdentity)
+	fmt.Printf("%v\n", userIdentity.ID)
+	fmt.Printf("%v\n", userIdentity.Metadata)
+	fmt.Printf("%v\n", userIdentity.email)
 	fmt.Println("----------------------------")
 	return userIdentity, authOK, err
 }
