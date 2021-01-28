@@ -15,13 +15,13 @@
 package jwt
 
 import (
-	"net/http"
-
+	"fmt"
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp/caddyauth"
-	jwtauth "github.com/dpkkmishra/caddy-jwt-test/pkg/auth"
+	jwtauth "github.com/greenpau/caddy-auth-jwt/pkg/auth"
 	"github.com/satori/go.uuid"
+	"net/http"
 )
 
 func init() {
@@ -76,6 +76,9 @@ func (m AuthMiddleware) Authenticate(w http.ResponseWriter, r *http.Request) (ca
 			userIdentity.Metadata[k] = v.(string)
 		}
 	}
+	fmt.Println("----------------------------")
+	fmt.Printf("%v\n", userIdentity)
+	fmt.Println("----------------------------")
 	return userIdentity, authOK, err
 }
 

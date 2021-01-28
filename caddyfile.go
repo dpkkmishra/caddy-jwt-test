@@ -25,9 +25,9 @@ import (
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp/caddyauth"
 
-	jwtacl "github.com/dpkkmishra/caddy-jwt-test/pkg/acl"
-	jwtauth "github.com/dpkkmishra/caddy-jwt-test/pkg/auth"
-	jwtconfig "github.com/dpkkmishra/caddy-jwt-test/pkg/config"
+	jwtacl "github.com/greenpau/caddy-auth-jwt/pkg/acl"
+	jwtauth "github.com/greenpau/caddy-auth-jwt/pkg/auth"
+	jwtconfig "github.com/greenpau/caddy-auth-jwt/pkg/config"
 )
 
 func init() {
@@ -179,7 +179,7 @@ func parseCaddyfileTokenValidator(h httpcaddyfile.Helper) (caddyhttp.MiddlewareH
 				} else {
 					entry.Deny()
 				}
-				mode := "email"
+				mode := "roles"
 				for i, arg := range args {
 					if i == 0 {
 						if err := entry.SetClaim(arg); err != nil {
@@ -198,7 +198,7 @@ func parseCaddyfileTokenValidator(h httpcaddyfile.Helper) (caddyhttp.MiddlewareH
 					}
 
 					switch mode {
-					case "email":
+					case "roles":
 						if err := entry.AddValue(arg); err != nil {
 							return nil, fmt.Errorf("%s argument claim value %s error: %s", rootDirective, arg, err)
 						}
@@ -293,7 +293,7 @@ func parseCaddyfileTokenValidator(h httpcaddyfile.Helper) (caddyhttp.MiddlewareH
 	if !defaultDenyACL {
 		p.AccessList = append(p.AccessList, &jwtacl.AccessListEntry{
 			Action: "allow",
-			Claim:  "email",
+			Claim:  "roles",
 			Values: []string{"any"},
 		})
 	}
