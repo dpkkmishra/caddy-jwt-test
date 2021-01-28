@@ -79,12 +79,12 @@ func (m AuthMiddleware) Authenticate(w http.ResponseWriter, r *http.Request) (ca
 			userIdentity.Metadata[k] = v.(string)
 		}
 	}
-	fmt.Println("----------------------------")
+	fmt.Println("-----------++++++++++++++++------------")
 	fmt.Printf("%v\n", userIdentity)
 	fmt.Printf("%v\n", userIdentity.ID)
 	fmt.Printf("%v\n", userIdentity.Metadata)
 	fmt.Printf("%v\n", userIdentity.email)
-	fmt.Println("----------------------------")
+	fmt.Println("------------+++++++++++++++++++---------------")
 	return userIdentity, authOK, err
 }
 
